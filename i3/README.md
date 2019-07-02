@@ -3,8 +3,13 @@
 ## Installation
 
 ```bash
-pacman -S i3-wm i3status rofi i3lock xbacklight feh conky touchpad_config
+pacman -S i3-wm i3status rofi i3lock xbacklight feh touchpad_config xautolock
 ```
+
+Configuration files
+
+* ~/.config/i3/config
+* /etc/i3status.conf
 
 ## Connecting to a network
 
@@ -28,6 +33,14 @@ Or add to i3 config
 
 ```bash
 touchpad_config -e $(touchpad_config -l | grep Synaptic | awk '{print $5}' | sed -e "s/id=//")
+```
+
+## Auto locking
+
+Put this in i3 config
+
+```bash
+exec --no-startup-id xautolock -time 5 -locker "i3lock -i /path/to/lock/screen.png"
 ```
 
 ## Setting up multiple displays
