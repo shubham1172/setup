@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# This script helps me update my dot file regularly
+# This script helps me update my dot files regularly
 # It exists in my crontab as:
 #
 # */30 * * * * ~/setup/scripts/backup.sh >/dev/null 2>&1
