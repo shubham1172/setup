@@ -10,7 +10,7 @@ cd ${HOME}/setup/
 BACKUP=${HOME}/setup/scripts/backup
 
 timestamp() {
-  date +"%m-%d-%Y"
+  date +"%m-%d-%Y at %T"
 }
 
 grep -v '^$\|^\s*\#' $BACKUP| while read -r line; do
@@ -19,6 +19,6 @@ done
 
 if [[ `git status --porcelain` ]]; then
 	git add .
-	git commit -m '$timestamp'
+	git commit -m "automatic update: $(timestamp)"
 	git push origin master
 fi
