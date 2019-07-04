@@ -10,14 +10,15 @@ cd ${HOME}/setup/
 BACKUP=${HOME}/setup/scripts/backup
 
 timestamp() {
-  date +"%m-%d-%Y at %T"
+  date +"%d-%m-%Y at %T"
 }
 
-grep -v '^$\|^\s*\#' $BACKUP| while read -r line; do
+grep -v '^$\|^\s*\#' $BACKUP | while read -r line; do
 	echo "$line" | awk '{ system("rsync " $1 " " $2) }'
 done
 
 if [[ `git status --porcelain` ]]; then
+	git pull origin master
 	git add .
 	git commit -m "automatic update: $(timestamp)"
 	git push origin master
