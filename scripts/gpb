@@ -1,0 +1,2 @@
+#!/bin/bash
+git push origin $(git branch | awk '/\*/ { print $2; }')
