@@ -6,6 +6,15 @@
 pacman -S i3-wm i3status rofi i3lock xbacklight feh touchpad_config xautolock
 ```
 
+### Extras
+```bash
+pacman -S network-manager-applet gnome-keyring dunst libnotify
+```
+
+* network-manager-applet - GUI for networks
+* gnome-keyring - store passwords for nm-applet
+* dunst and libnotify - notification daemon services
+
 Configuration files
 
 * ~/.config/i3/config

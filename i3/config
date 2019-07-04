@@ -173,6 +173,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# disable title bars
+for_window [class="^.*"] border pixel 1
+
 # lock screen
 # CTRL+ALT+L
 bindsym Control+Mod1+l exec "i3lock -i ~/Pictures/wallpapers/mtmanjaro.png"
@@ -186,6 +189,12 @@ bar {
 
 # touchpad enable tap to click/natural scrolling
 exec touchpad_config -e $(touchpad_config -l | grep Synaptic | awk '{print $5}' | sed -e "s/id=//")
+
+# notification manager
+exec --no-startup-id dunst
+
+# network
+exec --no-startup-id nm-applet
 
 # wallpaper
 exec --no-startup-id feh --bg-scale ${HOME}/Pictures/wallpapers/mtmanjaro.png

@@ -151,7 +151,6 @@ fi
 # aliases
 alias ll="ls -l"
 alias copy="xsel -ib"
-alias wificonnect="nmcli con up $(cat ~/.config/wifi/ssid) passwd-file ~/.config/wifi/password"
 
 alias awslogin="aws ecr get-login --no-include-email --region ap-south-1"
 

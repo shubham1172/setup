@@ -7,3 +7,6 @@
 # i3
 ~/.config/i3/config ~/setup/i3/config
 /etc/i3status.conf ~/setup/i3/i3status.conf
+
+# dunst
+~/.config/dunst/dunstrc ~/setup/dunst/dunstrc
