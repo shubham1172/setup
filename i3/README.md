@@ -8,12 +8,13 @@ pacman -S i3-wm i3status rofi i3lock xbacklight feh touchpad_config xautolock
 
 ### Extras
 ```bash
-pacman -S network-manager-applet gnome-keyring dunst libnotify
+pacman -S network-manager-applet gnome-keyring dunst libnotify compton playerctl
 ```
 
 * network-manager-applet - GUI for networks
 * gnome-keyring - store passwords for nm-applet
 * dunst and libnotify - notification daemon services
+* compton - composite window manager (window effects)
 
 Configuration files
 
