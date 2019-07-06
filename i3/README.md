@@ -77,3 +77,15 @@ workspace 2 output primary
 workspace 5 output VGA1 LVDS1
 workspace "2: vim" output VGA1
 ```
+
+## Key mapping
+
+i3 uses key names from xmodmap, a X server utility. To list out all keys
+```bash
+xmodmap -pke
+```
+
+General syntax
+```bash
+bindsym Key1+Key2 exec command
+```
