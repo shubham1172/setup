@@ -156,6 +156,7 @@ alias awslogin="aws ecr get-login --no-include-email --region ap-south-1"
 
 alias charm="bash /run/media/shubham1172/My\ Stuff/pycharm-community-2018.1.2/bin/pycharm.sh"
 alias goland="bash /var/opt/GoLand-2019.1.1/bin/goland.sh"
+alias firefox="/opt/firefox/firefox"
 
 alias gs="git status"
 alias gaa="git add ."
