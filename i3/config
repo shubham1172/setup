@@ -205,5 +205,8 @@ exec --no-startup-id dunst
 # network
 exec --no-startup-id nm-applet
 
+# kdeconnect applet
+exec --no-startup-id kdeconnect-indicator
+
 # wallpaper
 exec --no-startup-id feh --bg-scale ${HOME}/Pictures/wallpapers/mtmanjaro.png
