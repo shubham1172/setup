@@ -11,6 +11,9 @@
 
 set $mod Mod4
 
+# Second display
+set $secondary HDMI1
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 8
@@ -110,16 +113,28 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+# I have double instances of most workspaces to adapt to a dual monitor configuration in case
+set $ws1 "1:term"
+set $ws2 "2:term"
+set $ws3 "3:www"
+set $ws4 "4:www"
+set $ws5 "5:work"
+set $ws6 "6:work"
+set $ws7 "7:extra"
+set $ws8 "8:extra"
+set $ws9 "9:files"
+set $ws10 "10:media"
+
+# dual monitor distribution
+workspace $ws1 output primary
+workspace $ws2 output $secondary primary
+workspace $ws3 output primary
+workspace $ws4 output $secondary primary
+workspace $ws5 output primary
+workspace $ws6 output $secondary primary
+workspace $ws7 output primary
+workspace $ws8 output $secondary primary
+
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -145,10 +160,16 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+# assign clients to workspaces
+assign [class="Firefox"] $ws3
+assign [class="vlc"] $ws10
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
@@ -181,6 +202,10 @@ bindsym $mod+r mode "resize"
 
 # disable title bars
 for_window [class="^.*"] border pixel 1
+
+# alt+tab/alt+shift+tab
+bindsym Mod1+Tab workspace next
+bindsym Mod1+Shift+Tab workspace prev
 
 # lock screen
 # CTRL+ALT+L
