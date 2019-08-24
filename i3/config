@@ -162,6 +162,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # assign clients to workspaces
 assign [class="Firefox"] $ws3
+assign [class="^.*jetbrains-goland.*$"] $ws5
 assign [class="vlc"] $ws10
 
 # reload the configuration file
