@@ -40,7 +40,7 @@ bindsym Control+Mod1+t exec konsole
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec "rofi -combi-modi window,drun -show combi -modi combi -theme blue"
+bindsym $mod+d exec "rofi -combi-modi window,drun -show combi -modi combi -theme dmenu"
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
