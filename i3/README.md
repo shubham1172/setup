@@ -3,14 +3,16 @@
 ## Installation
 
 ```bash
-pacman -S i3-wm i3status rofi i3lock xbacklight feh touchpad_config xautolock
+pacman -S i3-wm i3status rofi i3lock xbacklight feh touchpad_config
 ```
 
 ### Extras
 ```bash
-pacman -S network-manager-applet gnome-keyring dunst libnotify compton playerctl
+pacman -S xautolock xss-lock network-manager-applet gnome-keyring dunst libnotify compton playerctl
 ```
 
+* xautolock - lock during inactivity
+* xss-lock - lock when lid closes [[ref](https://wiki.archlinux.org/index.php/Power_management#xss-lock)]
 * network-manager-applet - GUI for networks
 * gnome-keyring - store passwords for nm-applet
 * dunst and libnotify - notification daemon services
@@ -47,11 +49,25 @@ touchpad_config -e $(touchpad_config -l | grep Synaptic | awk '{print $5}' | sed
 
 ## Auto locking
 
-Put this in i3 config
+Put these in i3 config
 
 ```bash
-exec --no-startup-id xautolock -time 5 -locker "i3lock -i /path/to/lock/screen.png"
+# lock when inactive
+exec --no-startup-id xautolock -time 5 -detectsleep -locker ${HOME}/setup/i3/auto_lock_screen.sh
+
+# lock when the lid closes
+exec --no-startup-id xss-lock -- "/path/to/lock.sh"
 ```
+
+lock.sh
+```bash
+# use this to lock and use a lockscreen image
+i3lock -i "/path/to/lock/screen.png"
+
+# use this to lock with the background blurred
+i3lock-fancy
+```
+
 
 ## Setting up multiple displays
 

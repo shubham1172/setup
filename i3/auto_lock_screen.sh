@@ -2,7 +2,8 @@
 
 # Settings
 declare -a LIST_OF_WINDOW_TITLES_THAT_PREVENT_LOCKING=(
-    "YouTube"
+    "YouTube",
+    "VLC"
 )
 
 # Dependencies
@@ -35,6 +36,7 @@ should_lock() {
 
     if is_fullscreen $id; then
         for i in "${LIST_OF_WINDOW_TITLES_THAT_PREVENT_LOCKING[@]}"; do
+            # check $title contains $i
             if [[ $title =~ $i ]]; then
                 return 1
             fi
@@ -46,5 +48,5 @@ should_lock() {
 
 # main()
 if should_lock; then
-    i3lock -i ${HOME}/Pictures/wallpapers/mtmanjaro.png
+    ${HOME}/setup/i3/lock.sh
 fi
