@@ -1,0 +1,7 @@
+# automount: file system information
+#
+# format:
+# type	UUID	dest 
+
+ntfs	8A9C721A9C7200CD  /run/media/shubham1172/OS
+ntfs    22C67D8EC67D6349  /run/media/shubham1172/My\040Stuff
