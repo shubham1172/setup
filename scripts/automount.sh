@@ -2,8 +2,23 @@
 # auto mount my partitions on start
 # read the mounting info from automount
 
-PART_INFO=${HOME}/setup/scripts/automount
+USER_HOME=$(eval echo ~${SUDO_USER})
+MOUNT_INFO=${USER_HOME}/setup/scripts/automount
 
-grep -v '^$\|^\s*\#' $PART_INFO	| while read -r line; do
-		echo $line | awk '{ system("mount -t $1 --uuid $2 $3") }'
+# ask for root permissions
+if [ $EUID != 0 ]; then
+	echo 'Root permissions required, run with sudo.'
+    exit $?
+fi
+
+grep -v '^$\|^\s*\#' $MOUNT_INFO | while read -r type uuid dest; do
+	if [ -d "$dest" ]; then
+			# try to umount if mounted
+			umount "$dest" || /bin/true
+	else
+			# create the dir
+			mkdir -p "$dest"
+	fi
+	# mount it finally
+	eval "mount -t $type --uuid $uuid \"$dest\""
 done 
