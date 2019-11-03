@@ -241,7 +241,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id kdeconnect-indicator
 
 # automount partitions
-exec --no-startup-id  "sudo ${HOME}/setup/scripts/automount.sh"
+exec --no-startup-id "${HOME}/setup/scripts/automount.sh"
 
 # wallpaper
 exec --no-startup-id feh --bg-scale ${HOME}/Pictures/wallpapers/mtmanjaro.png
