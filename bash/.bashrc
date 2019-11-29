@@ -151,6 +151,7 @@ fi
 # aliases
 alias ll="ls -l"
 alias copy="xsel -ib"
+alias camera="vlc v4l2:// :input-slave=alsa:// :v4l-vdev=\"/dev/video0\""
 
 alias awslogin="aws ecr get-login --no-include-email --region ap-south-1"
 
