@@ -113,9 +113,8 @@ shopt -s expand_aliases
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
 
-#
-# # ex - archive extractor
-# # usage: ex <file>
+# ex - archive extractor
+# usage: ex <file>
 ex ()
 {
   if [ -f $1 ] ; then
@@ -138,8 +137,14 @@ ex ()
   fi
 }
 
-# bash prompt
+# create a directory and cd into it 
+mkcdir ()
+{
+    mkdir -p -- "$1" &&
+      cd -P -- "$1"
+}
 
+# bash prompt
 function _update_ps1() {
     PS1=$(powerline-shell $?)
 }
