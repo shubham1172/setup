@@ -10,3 +10,6 @@
 
 # dunst
 ~/.config/dunst/dunstrc ~/setup/dunst/dunstrc
+
+# poweline-shell
+~/.config/powerline-shell/config.json ~/setup/powerline-shell/config.json

@@ -173,5 +173,6 @@ alias glo="git log --oneline"
 
 # exports
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
-export PATH="$PATH:~/.local/bin:/var/opt/android-studio/bin"
+export PATH="$PATH:$HOME/.local/bin:/var/opt/android-studio/bin:$HOME/go/bin"
+export GOPATH="$HOME/go/"
 export EDITOR='vim'
