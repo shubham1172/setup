@@ -168,6 +168,7 @@ alias gs="git status"
 alias gaa="git add ."
 alias gcm="git commit -m"
 alias gpm="git push origin master"
+alias gpf="git push --set-upstream fork"
 alias gl="git log"
 alias glo="git log --oneline"
 
