@@ -1,6 +1,9 @@
 # bash
 ~/.bashrc ~/setup/bash/.bashrc
 
+# zsh
+~/.zshrc ~/setup/zsh/.zshrc
+
 # vim
 ~/.vimrc ~/setup/vim/.vimrc
 

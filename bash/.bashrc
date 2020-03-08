@@ -129,7 +129,7 @@ ex ()
       *.tgz)       tar xzf $1   ;;
       *.zip)       unzip $1     ;;
       *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
+      *.7z)        7z x $1      
       *)           echo "'$1' cannot be extracted via ex()" ;;
     esac
   else
@@ -167,7 +167,7 @@ alias firefox="/opt/firefox/firefox"
 alias gs="git status"
 alias gaa="git add ."
 alias gcm="git commit -m"
-alias gcsm = "git commit -sm"
+alias gcsm="git commit -sm"
 alias gpm="git push origin master"
 alias gl="git log"
 alias glo="git log --oneline"
