@@ -16,3 +16,8 @@
 
 # poweline-shell
 ~/.config/powerline-shell/config.json ~/setup/powerline-shell/config.json
+
+# polybar
+~/.config/polybar/config.ini ~/setup/polybar/config.ini
+~/.config/polybar/modules.ini ~/setup/polybar/modules.ini
+~/.config/polybar/launch.sh ~/setup/polybar/launch.sh
