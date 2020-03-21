@@ -203,7 +203,15 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # disable title bars
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
+
+# gaps
+gaps inner 5
+gaps bottom 2
+
+workspace $ws1 gaps outer 40
+
+smart_gaps inverse_outer
 
 # alt+tab/alt+shift+tab
 bindsym Mod1+Tab workspace next
