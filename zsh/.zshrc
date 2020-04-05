@@ -152,6 +152,12 @@ alias free='free -m'                      # show sizes in MB
 alias goland="bash /var/opt/GoLand-2019.1.1/bin/goland.sh"
 alias gs="git status"
 
+# create a directory and cd into it
+mkcdir ()
+{
+    mkdir -p -- "$1" &&
+      cd -P -- "$1"
+}
 
 # Exports
 export EDITOR='vim'
