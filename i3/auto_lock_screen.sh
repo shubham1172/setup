@@ -3,7 +3,9 @@
 # Settings
 declare -a LIST_OF_WINDOW_TITLES_THAT_PREVENT_LOCKING=(
     "YouTube",
-    "VLC"
+    "VLC",
+	"Prime Video",
+	"Netflix"
 )
 
 # Dependencies

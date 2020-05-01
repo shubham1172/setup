@@ -162,8 +162,10 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # assign clients to workspaces
 assign [class="Firefox"] $ws3
+assign [class="google-chrome"] $ws3
 assign [class="^.*jetbrains-goland.*$"] $ws5
 assign [class="^.*pycharm.*$"] $ws5
+assign [class="Code - Insiders"] $ws5
 assign [class="vlc"] $ws10
 
 # reload the configuration file
@@ -206,16 +208,16 @@ bindsym $mod+r mode "resize"
 for_window [class="^.*"] border pixel 0
 
 # gaps
-gaps inner 5
-gaps bottom 2
+gaps inner 0
+gaps bottom 0
 
 # workspace $ws1 gaps outer 40
 
-smart_gaps inverse_outer
+# smart_gaps inverse_outer
 
 # alt+tab/alt+shift+tab
-bindsym Mod1+Tab workspace next
-bindsym Mod1+Shift+Tab workspace prev
+bindsym Mod1+Tab workspace back_and_forth
+bindsym Mod1+Shift+Tab workspace back_and_forth
 
 # lock screen
 # CTRL+ALT+L
@@ -256,3 +258,4 @@ exec --no-startup-id "${HOME}/setup/scripts/automount.sh"
 
 # wallpaper
 exec --no-startup-id feh --bg-scale ${HOME}/Pictures/wallpapers/mtmanjaro.png
+
