@@ -223,6 +223,9 @@ bindsym Mod1+Shift+Tab workspace back_and_forth
 # CTRL+ALT+L
 bindsym Control+Mod1+l exec "${HOME}/setup/i3/lock.sh"
 
+# screenshot
+bindsym $mod+Shift+s exec "spectacle" 
+
 # lock during inactivity
 exec --no-startup-id xautolock -time 15 -detectsleep -locker ${HOME}/setup/i3/auto_lock_screen.sh
 
