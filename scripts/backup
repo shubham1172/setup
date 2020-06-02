@@ -21,3 +21,6 @@
 ~/.config/polybar/config.ini ~/setup/polybar/config.ini
 ~/.config/polybar/modules.ini ~/setup/polybar/modules.ini
 ~/.config/polybar/launch.sh ~/setup/polybar/launch.sh
+
+# tmux
+~/.tmux.conf ~/setup/tmux/.tmux.conf
