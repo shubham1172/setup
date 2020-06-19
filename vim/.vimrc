@@ -3,6 +3,7 @@ filetype off                  " required
 
 " Show line numbers
 set number
+set relativenumber
 
 " Tab width
 set tabstop=4
@@ -35,13 +36,14 @@ set signcolumn=yes
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
-
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'davidhalter/jedi-vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " End of Vim-Plug config
 call plug#end()
@@ -108,6 +110,9 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+" Ctrl P to list git-ls
+nnoremap <C-p> :GFiles<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
