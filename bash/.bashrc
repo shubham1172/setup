@@ -172,6 +172,10 @@ alias gpm="git push origin master"
 alias gl="git log"
 alias glo="git log --oneline"
 
+alias addrhdmi = "xrandr --output HDMI1 --auto --right-of eDP1"
+alias addchdmi = "xrandr --output HDMI1 --mode 1024x768 --same-as eDP1"
+alias rmhdmi = "xrandr --output HDMI1 --off"
+
 # exports
 export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
 export PATH="$PATH:$HOME/.local/bin:/var/opt/android-studio/bin:$HOME/go/bin"
