@@ -24,3 +24,4 @@
 
 # tmux
 ~/.tmux.conf ~/setup/tmux/.tmux.conf
+/bin/start-haskell ~/setup/scripts/start-haskell

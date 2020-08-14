@@ -1,0 +1,30 @@
+#!/bin/bash
+
+session="HaskellSession"
+
+mkdir -p $HOME/haskell
+cd $HOME/haskell
+
+SESSIONEXISTS=$(tmux list-sessions | grep $session)
+
+if [ "$SESSIONEXISTS" = "" ]
+then
+	# create a new session
+	tmux new-session -d -s $session
+	
+	# start vim (C-m is just the enter key)
+	tmux send-keys 'vim' C-m
+
+	# splits
+	tmux split-window -v -p 30
+	tmux split-window -h -p 30
+
+	# start a shell
+	tmux send-keys 'zsh' C-m
+
+	# start ghci
+	tmux select-pane -t 1
+	tmux send-keys 'ghci' C-m
+fi
+
+tmux attach-session -t $SESSION:0
