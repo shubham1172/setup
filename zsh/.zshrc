@@ -164,3 +164,4 @@ mkcdir ()
 export EDITOR='vim'
 export GOPATH="$HOME/go/"
 export PATH="$PATH:$HOME/.local/bin:/var/opt/android-studio/bin:$HOME/go/bin"
+[ -f "/home/shubham1172/.ghcup/env" ] && source "/home/shubham1172/.ghcup/env" # ghcup-env
