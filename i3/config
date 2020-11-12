@@ -126,13 +126,13 @@ set $ws9 "9:files"
 set $ws10 "10:media"
 
 # dual monitor distribution
-workspace $ws1 output primary
+workspace $ws1 output primary $secondary
 workspace $ws2 output $secondary primary
-workspace $ws3 output primary
+workspace $ws3 output primary $secondary
 workspace $ws4 output $secondary primary
-workspace $ws5 output primary
+workspace $ws5 output primary $secondary
 workspace $ws6 output $secondary primary
-workspace $ws7 output primary
+workspace $ws7 output primary $secondary
 workspace $ws8 output $secondary primary
 
 
@@ -208,7 +208,8 @@ bindsym $mod+r mode "resize"
 for_window [class="^.*"] border pixel 0
 
 # gaps
-gaps inner 0
+gaps inner 5
+gaps outer 5
 gaps bottom 0
 
 # workspace $ws1 gaps outer 40
@@ -260,5 +261,5 @@ exec --no-startup-id kdeconnect-indicator
 exec --no-startup-id "${HOME}/setup/scripts/automount.sh"
 
 # wallpaper
-exec --no-startup-id feh --bg-scale ${HOME}/Pictures/wallpapers/mtmanjaro.png
+exec --no-startup-id feh --bg-fill ${HOME}/Pictures/wallpapers/ultrawide_minimal.jpg
 
