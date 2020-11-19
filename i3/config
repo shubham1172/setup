@@ -208,9 +208,9 @@ bindsym $mod+r mode "resize"
 for_window [class="^.*"] border pixel 0
 
 # gaps
-gaps inner 5
-gaps outer 5
-gaps bottom 0
+# gaps inner 5
+# gaps outer 5
+# gaps bottom 0
 
 # workspace $ws1 gaps outer 40
 
