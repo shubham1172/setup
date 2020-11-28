@@ -24,4 +24,8 @@
 
 # tmux
 ~/.tmux.conf ~/setup/tmux/.tmux.conf
+
+# scripts
 /bin/start-haskell ~/setup/scripts/start-haskell
+/bin/attach-monitor ~/setup/scripts/attach-monitor
+/bin/detach-monitor ~/setup/scripts/detach-monitor
