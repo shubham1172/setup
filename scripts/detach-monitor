@@ -3,3 +3,7 @@
 xrandr --output eDP1 --primary --mode 1366x768 --left-of HDMI1
 # remove the monitor 
 xrandr --output HDMI1 --off
+# reset feh
+feh --bg-fill ${HOME}/Pictures/wallpapers/mtmanjaro.png
+# restart i3
+i3-msg restart

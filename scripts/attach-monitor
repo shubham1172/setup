@@ -4,3 +4,7 @@
 xrandr --output HDMI1 --primary --mode 2560x1080 --right-of eDP1
 # remove the other display
 xrandr --output eDP1 --off
+# reset feh
+feh --bg-fill ${HOME}/Pictures/wallpapers/ultrawide_minimal.jpg
+# restart i3
+i3-msg restart
