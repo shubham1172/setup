@@ -1,0 +1,9 @@
+[package]
+disabled = true
+
+[time]
+disabled = false
+format = "at [$time]($style)"
+time_format = "%R"
+use_12hr = true
+utc_time_offset = "local"
