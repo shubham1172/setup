@@ -1,5 +1,7 @@
 # ZSH
 
+Note, this README is outdated. TODO: update it.
+
 ## Setup
 
 Install
