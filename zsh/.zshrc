@@ -7,7 +7,9 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/src/utils:$PATH
+export PATH=$HOME/src/utils:$HOME/go/bin:$HOME/.dapr/bin:$PATH
+
+export JAVA_HOME=`/usr/libexec/java_home -v 11.0.2`
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -98,8 +100,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias k="kubectl"
+alias kl="kubectl logs"
 alias cd="z"
 alias df="df -h" # human readable sizes
+
+# git fetch a PR and checkout the latest commit
+gfc () {
+  git fetch upstream pull/$1/head && 
+    git checkout FETCH_HEAD
+}
 
 # create a directory and cd into it
 mkcdir ()
@@ -144,3 +153,4 @@ export NVM_DIR="$HOME/.nvm"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source ~/.zsh-interactive-cd.plugin.zsh
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
